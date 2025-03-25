@@ -1,0 +1,157 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f4f4fc, #ffe4e1);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transform: scale(0.95);
+    animation: popIn 0.5s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+h1, h2 {
+    color: #6a0dad;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 2px 2px 10px rgba(106, 13, 173, 0.3);
+}
+
+h1:hover, h2:hover {
+    color: #ff69b4;
+    text-shadow: 2px 2px 15px rgba(255, 105, 180, 0.5);
+    transform: rotate(-3deg);
+}
+
+select, button, textarea {
+    margin: 10px 0;
+    padding: 12px;
+    width: 85%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+button {
+    background: linear-gradient(to right, #d4af37, #ff69b4);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    box-shadow: 3px 3px 15px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 105, 180, 0.7);
+    animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+    from { box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); }
+    to { box-shadow: 0 0 20px rgba(255, 105, 180, 0.9); }
+}
+
+button:hover {
+    background: linear-gradient(to right, #b8860b, #c71585);
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 3px 3px 20px rgba(184, 134, 11, 0.4);
+}
+
+#quoteContainer {
+    font-style: italic;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.7);
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in 0.5s forwards;
+    box-shadow: 2px 2px 15px rgba(255, 192, 203, 0.5);
+    transition: transform 0.3s;
+}
+
+#quoteContainer:hover {
+    transform: scale(1.05);
+}
+
+#favorites, #history, #dailyQuote, #feedback, #music, #journaling, #breathing, #community, #gratitude, #mentalHealthTips {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(to right, #ffb6c1, #dda0dd);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(186, 85, 211, 0.4);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.6s ease-in-out forwards;
+    transition: transform 0.3s;
+}
+
+#favorites:hover, #history:hover, #dailyQuote:hover, #feedback:hover, #music:hover, #journaling:hover, #breathing:hover, #community:hover, #gratitude:hover, #mentalHealthTips:hover {
+    transform: translateY(5px);
+    box-shadow: 0px 4px 20px rgba(186, 85, 211, 0.5);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: linear-gradient(to right, #dda0dd, #ff69b4);
+    margin: 5px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 2px 2px 10px rgba(221, 160, 221, 0.4);
+    position: relative;
+}
+
+li::before {
+    content: "✨";
+    position: absolute;
+    left: -20px;
+    animation: sparkle 1s infinite alternate;
+}
+
+@keyframes sparkle {
+    from { opacity: 0.5; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1.1); }
+}
+
+li:hover {
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 2px 2px 15px rgba(255, 105, 180, 0.6);
+}
+

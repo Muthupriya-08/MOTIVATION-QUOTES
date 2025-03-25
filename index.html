@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Motivational Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>How are you feeling today?</h1>
+        <select id="moodSelector">
+            <option value="happy">Happy 😊</option>
+            <option value="sad">Sad 😢</option>
+            <option value="stressed">Stressed 😖</option>
+            <option value="anxious">Anxious 😰</option>
+            <option value="unmotivated">Unmotivated 😞</option>
+        </select>
+        <button onclick="getQuote()">Get Quote</button>
+        
+        <div id="quoteContainer">
+            <p id="quoteText">Your quote will appear here...</p>
+        </div>
+        
+        <button id="saveQuote" onclick="saveFavorite()">❤️ Save Quote</button>
+        <button id="shareQuote" onclick="shareQuote()">📢 Share</button>
+        <button id="clearHistory" onclick="clearHistory()">🗑️ Clear History</button>
+
+        <div id="favorites">
+            <h2>Saved Quotes</h2>
+            <ul id="savedQuotesList"></ul>
+        </div>
+        <div id="dailyQuote">
+            <h2>Daily Inspirational Quote</h2>
+            <p id="dailyQuoteText">Loading...</p>
+        </div>
+        <div id="history">
+            <h2>Quote History</h2>
+            <ul id="quoteHistoryList"></ul>
+        </div>
+        <div id="feedback">
+            <h2>Give Us Feedback</h2>
+            <textarea id="feedbackText" placeholder="Share your thoughts..."></textarea>
+            <button onclick="submitFeedback()">Submit</button>
+        </div>
+        <div id="music">
+            <h2>Relaxing Music</h2>
+            <button onclick="playMusic()">🎵 Play Music</button>
+            <button onclick="stopMusic()">⏹️ Stop Music</button>
+        </div>
+        <div id="journaling">
+            <h2>Daily Journaling</h2>
+            <textarea id="journalEntry" placeholder="Write about your day..."></textarea>
+            <button onclick="saveJournal()">Save Entry</button>
+            <h3>Past Entries</h3>
+            <ul id="journalList"></ul>
+        </div>
+        <div id="breathing">
+            <h2>Breathing Exercise</h2>
+            <p>Follow this guided breathing exercise to relax:</p>
+            <button onclick="startBreathingExercise()">Start</button>
+            <p id="breathingGuide">Inhale... Exhale...</p>
+        </div>
+        <div id="community">
+            <h2>Community Support</h2>
+            <p>Connect with others who feel the same way.</p>
+            <button onclick="joinCommunity()">Join Support Group</button>
+        </div>
+        <div id="gratitude">
+            <h2>Gratitude Journal</h2>
+            <p>Write down things you are grateful for:</p>
+            <textarea id="gratitudeEntry" placeholder="I am grateful for..."></textarea>
+            <button onclick="saveGratitude()">Save Gratitude</button>
+            <h3>Past Entries</h3>
+            <ul id="gratitudeList"></ul>
+        </div>
+        <div id="mentalHealthTips">
+            <h2>Mental Health Tips</h2>
+            <p>Here are some tips to improve your mental well-being:</p>
+            <ul>
+                <li>Take deep breaths and relax.</li>
+                <li>Stay hydrated and eat nutritious food.</li>
+                <li>Talk to a trusted friend or family member.</li>
+                <li>Practice mindfulness or meditation.</li>
+                <li>Engage in physical activities.</li>
+                <li>Get enough sleep.</li>
+                <li>Limit social media and digital distractions.</li>
+                <li>Engage in a creative hobby to express yourself.</li>
+                <li>Seek professional help when needed.</li>
+                <li>Set small, achievable goals to build confidence.</li>
+                <li>Listen to calming music or nature sounds.</li>
+                <li>Take breaks and practice self-care routines.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
